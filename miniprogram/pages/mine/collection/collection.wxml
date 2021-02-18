@@ -1,0 +1,3 @@
+<!--pages/mine/collection/collection.wxml-->
+<import src="../../template/template.wxml" />
+<template is="empty"></template>
