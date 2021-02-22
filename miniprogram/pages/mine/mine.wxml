@@ -1,2 +1,42 @@
 <!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<view class="list_box" style="display:flex;">
+  <view class="useInfo">
+    <view class="avatar">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view style="margin-top:15rpx"><open-data type="userNickName" style="font-size:28rpx"></open-data></view>
+  </view>
+  <view class="Block">
+    <view class="small_block" bindtap="gotoPage" data-page="home">
+      <image src="/images/home.png" class="icon" />
+      <view class="title">我的主页</view>
+    </view>
+    <view class="small_block" bindtap="gotoPage" data-page="personal">
+      <image src="/images/Info.png" class="icon" />
+      <view class="title">个人信息</view>
+    </view>
+    <view class="small_block" bindtap="gotoPage" data-page="settleIn">
+      <image src="/images/settleIn.png" class="icon" />
+      <view class="title">入驻</view>
+    </view>
+  </view>
+</view>
+<view class="list_box">
+  <view class="list" bindtap="gotoPage" data-page="history">
+    <view style="font-size:28rpx">我的足迹</view>
+    <image src="/images/nextone.png" class="next_icon" />
+  </view>
+  <view class="list" bindtap="gotoPage" data-page="collection">
+    <view style="font-size:28rpx">我的收藏</view>
+    <image src="/images/nextone.png" class="next_icon" />
+  </view>
+  <view class="list" bindtap="gotoPage" data-page="attention">
+    <view style="font-size:28rpx">我的关注</view>
+    <image src="/images/nextone.png" class="next_icon" />
+  </view>
+  <view class="list1">
+    <view style="font-size:28rpx">联系客服</view>
+    <button open-type="contact" class="contact-button"></button>
+    <image src="/images/nextone.png" class="next_icon" />
+  </view>
+</view>

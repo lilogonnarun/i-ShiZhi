@@ -1,0 +1,60 @@
+{
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "pages/sort/sort",
+          "pathName": "pages/sort/sort",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/mine/mine",
+          "pathName": "pages/mine/mine",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/senior/senior",
+          "pathName": "pages/senior/senior",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "detail",
+          "pathName": "pages/index/detail/detail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/shop/shop",
+          "pathName": "pages/shop/shop",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/issue/issue",
+          "pathName": "pages/issue/issue",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+<!--pages/shop/shop.wxml-->
+<!-- 搜索框 -->
+<view style="height:80rpx;">
+  <view class="search-form" bindtap="gotoSearch">
+    <image style="padding-left:30rpx;width:40rpx;height:40rpx" src="/images/search.png"></image>
+    <view style="padding-left:20rpx;color:#adadad;font-size:28rpx">搜一搜</view>
+  </view>
+</view>
+<view class='container'>
+  <!-- 左列表 -->
+  <scroll-view class="MenuDiv" scroll-y="true" style="height:{{scroll_height}}rpx">
+    <view class="bottomImages {{curIndex==item.id?'active':''}}" wx:for="{{cateItems}}" wx:key="key"
+      bindtap="switchRightTab" data-id="{{item.id}}" data-index='{{index}}'>
+      {{item.class}}
+    </view>
+  </scroll-view>
+  <!--右列表-->
+  <scroll-view class="nav_right" scroll-y="true" style="height:{{scroll_height}}rpx;">
+    <view class="list_box" wx:for="{{newlist}}" wx:key="index">
+      <image src="{{item.image}}" />
+      <view class="box_right">
+        <view class="title">{{item.title}}</view>
+        <view class="name">{{item.name}}</view>
+        <view class="price">¥{{item.price}}</view>
+        <view class="view_times">访问量：{{item.view_times}}</view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

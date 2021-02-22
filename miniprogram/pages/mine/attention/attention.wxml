@@ -1,0 +1,3 @@
+<!--pages/mine/attention/attention.wxml-->
+<import src="../../template/template.wxml" />
+<template is="empty"></template>

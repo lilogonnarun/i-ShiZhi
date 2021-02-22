@@ -1,5 +1,0 @@
-<!--pages/sort/sort.wxml-->
-<text>pages/sort/sort.wxml</text>
-<view>
-  <tabbar tabbar="{{tabbar}}"></tabbar>
-</view>

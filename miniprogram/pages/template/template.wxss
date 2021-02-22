@@ -1,0 +1,15 @@
+/* 列表为空 */
+.empty{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 120rpx;
+}
+.empty image{
+  width: 300rpx;
+  height: 300rpx;
+}
+.empty text{
+  font-size: 28rpx;
+  color: gray;
+}

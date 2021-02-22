@@ -1,1 +1,84 @@
 /* pages/mine/mine.wxss */
+page {
+  background-color: #f5f5f9;
+}
+/* 列表框样式 */
+.list_box {
+  margin:30rpx 5%;
+  width:90%;
+  margin-left:5%;
+  background-color:white;
+  border-radius:30rpx;
+  box-shadow: 0rpx 10rpx 30rpx 10rpx rgba(85, 85, 85, 0.10);
+}
+.useInfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20rpx 0 20rpx 20rpx;
+  width: 300rpx;
+}
+.avatar{
+  width:120rpx;
+  height:120rpx;
+  border-radius:60rpx;
+  box-shadow: 0rpx 10rpx 30rpx 10rpx rgba(85, 85, 85, 0.10);
+  display: flex;
+  overflow: hidden;
+}
+.Block{
+  padding: 20rpx;
+  margin: 20rpx 20rpx 20rpx 0;
+  width: 400rpx;
+}
+.small_block{
+  display: flex;
+  align-items: center;
+  padding: 10rpx;
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #3c3c3c
+}
+.small_block .title{
+  margin-left: 40rpx;
+}
+.small_block .icon{
+  width: 45rpx;
+  height: 45rpx;
+}
+/* 列表样式 */
+.list{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content: space-between;
+  width: 90%;
+  margin-left: 5%;
+  padding: 25rpx 0;
+  font-size: 28rpx;
+  border-bottom: 0.5px solid #f0f0f0;
+}
+.next_icon{
+  width: 40rpx;
+  height: 40rpx;
+}
+.list1{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content: space-between;
+  width: 90%;
+  margin-left: 5%;
+}
+/* 客服按钮 */
+.contact-button{
+  color: white;
+  height: 80rpx;
+  width: 72%;
+  padding: 0;
+  background-color: transparent; 
+}
+.contact-button::after{
+  border: none;
+}

@@ -1,0 +1,111 @@
+<!--pages/mine/home/home.wxml-->
+<view class="top_box">
+    <view class="top_first">
+        <view class="top_img">
+            <open-data type="userAvatarUrl"></open-data>
+        </view>
+        <view class="name_signature">
+            <view class="name">CPCer</view>
+            <view class="signature">funny everyday</view>
+            <view class="flower_money">
+                <image class="flower_img" src="/images/flower.png" />
+                <text class="flower_num">:12</text>
+                <image class="money_img" src="/images/money.png" />
+                <text class="money_num">:13</text>
+            </view>
+        </view>
+        <navigator class="edit" url="../personal/personal">
+            编辑
+        </navigator>
+    </view>
+    <view class="jinyan">
+        <text class="level">Lv 1</text>
+        <image class="level_img" src="/images/level.png" ></image>
+        <view class="progress-box" >
+            <progress percent="80" color="#10AEFF" active stroke-width="5" show-info="true" font-size="25rpx"/>
+        </view>
+
+    </view>
+    
+    <view class="top_second">
+        <image class="label_img" src="/images/biaoqian.png"/>
+        <view class="label_list" wx:for="{{label_list}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+            <view class="label">
+                {{item}}
+            </view>
+        </view>
+    </view>
+     <view class="top_third">
+        <image class="fans_img" src="/images/fans.png"></image>
+        <view class="fans">
+            粉丝：
+        </view>
+        <view class="fans_numble">
+            123
+        </view>
+        <image class="zan_img" src="/images/zan.png"></image>
+        <view class="zans">
+            获赞：
+        </view>
+        <view class="zans_numble">
+            123
+        </view>
+    </view>
+</view>
+<view class="tap_title">
+    <view class="title_item {{item.isActive?'active':' '}}" 
+    wx:for="{{tabs}}" 
+    wx:for-item="item" 
+    wx:for-index="index" 
+    wx:for-key="id"
+    wx:key="index"
+    bindtap="handleItemTap"
+    data-index="{{index}}">
+            {{item.name}}
+    </view>
+</view>
+<view class="my_work" hidden="{{tabs[1].isActive!=true}}" >
+    <view class="column">
+        <block wx:for="{{Info}}" wx:key="index">
+        <view class="box" wx:if="{{index%2==0}}" bindtap="gotoDetail"> <!-- 奇偶分开放 -->
+            <image src="{{item.pic}}" class="content_pic" mode="widthFix" />
+            <view class="title">{{item.title}}</view>
+            <view class="bottom_row">
+            <view class="row">
+                <view class="userAvatarUrl">
+                <open-data type="userAvatarUrl"></open-data>
+                </view>
+                <view class="userNickName">{{item.nickName}}</view>
+            </view>
+            <view class="row">
+                <image src="/images/likes.png" class="likes" />
+                <view class="likes_num">{{item.likes_num}}</view>
+            </view>
+            </view>
+        </view>
+        </block>
+    </view>
+    <view class="column">
+        <block wx:for="{{Info}}" wx:key="index">
+        <view class="box" wx:if="{{index%2==1}}" bindtap="gotoDetail"> <!-- 奇偶分开放 -->
+            <image src="{{item.pic}}" class="content_pic" mode="widthFix" />
+            <view class="title">{{item.title}}</view>
+            <view class="bottom_row">
+            <view class="row">
+                <view class="userAvatarUrl">
+                <open-data type="userAvatarUrl"></open-data>
+                </view>
+                <view class="userNickName">{{item.nickName}}</view>
+            </view>
+            <view class="row">
+                <image src="/images/likes.png" class="likes" />
+                <view class="likes_num">{{item.likes_num}}</view>
+            </view>
+            </view>
+        </view>
+        </block>
+    </view>
+</view>
+<view class="my_inf" hidden="{{tabs[0].isActive!=true}}">
+    个人信息
+</view>

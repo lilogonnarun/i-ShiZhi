@@ -1,0 +1,6 @@
+<template name="empty">
+  <view class="empty">
+    <image src="/images/empty.png" />
+    <text>暂无数据~</text>
+  </view>
+</template>
