@@ -1,4 +1,4 @@
-<!--pages/index/index.wxml-->
+<!--TODO:下拉刷新-->
 <view class="statusBar" style="height:{{statusBarHeight}}px;"></view>
 <view>
   <!-- 顶部导航栏 -->
@@ -40,7 +40,7 @@
         <view class="column">
           <block wx:for="{{cards.content}}" wx:key="index">
           <!--pass data 'id' to js-->
-            <view class="box" wx:if="{{index%2==0}}" bindtap="gotoDetail"> <!-- 奇偶分开放 -->
+            <view class="box" wx:if="{{index%2==0}}" bindtap="gotoDetail" data-detail="{{item}}"> <!-- 奇偶分开放 -->
               <image src="{{item.img1}}" class="content_pic" mode="widthFix" />
               <view class="title">{{item.title}}</view>
               <view class="bottom_row">
@@ -62,7 +62,7 @@
 
         <view class="column">
           <block wx:for="{{cards.content}}" wx:key="index">
-            <view class="box" wx:if="{{index%2==1}}" bindtap="gotoDetail"> <!-- 奇偶分开放 -->
+            <view class="box" wx:if="{{index%2==1}}" bindtap="gotoDetail" data-contentDetail="{{item}}"> <!-- 奇偶分开放 -->
               <image src="{{item.img1}}" class="content_pic" mode="widthFix" />
               <view class="title">{{item.title}}</view>
               <view class="bottom_row">
@@ -89,7 +89,7 @@
 </view>
 
 <!-- 分类栏列表更多内容 -->
-<view wx:if="{{showPopup}}" class="popup_shade" bindtap="closePopup" style="padding-top:{{statusBarHeight+45}}px;" catchtouchmove="ture">
+<view wx:if="{{showPopup}}" class="popup_shade" bindtap="closePopup" style="padding-top:{{statusBarHeight+45}}px;" catchtouchmove="true">
    <view wx:if="{{showPopup}}" class="popup" catchtap="none">
     <view class="top_row">
       <view class="title">推荐</view>

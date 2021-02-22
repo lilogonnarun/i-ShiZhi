@@ -28,8 +28,6 @@ Page({
         this.setData({
           cards:res.data
         })
-    
-      console.log(res);
     }
     })
   
@@ -53,9 +51,12 @@ Page({
   },
   // 前往详情页
   /*TODO : change method */
-  gotoDetail(){
+  gotoDetail(e){
+    console.log("查看详情")
+    const detail= e.currentTarget.dataset.detail;
+    console.log(detail)
     wx.navigateTo({
-      url: './detail/detail',
+      url: './detail/detail?content='+JSON.stringify(detail)+''
     })
   },
   // 分类栏查看更多
