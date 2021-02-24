@@ -27,13 +27,14 @@
       </view>
     </view>
     <!-- 关注列表 -->
-    <view class="tab_content" hidden="{{activeIndex != 0}}">
+    <!--TODO: 问答卡片-->
+    <view class="tab_content" hidden="{{activeIndex != 1}}">
 
-      关注
+      <questionCard></questionCard>
 
     </view>
     <!-- 发现列表 -->
-    <view class="tab_content" hidden="{{activeIndex != 1}}">
+    <view class="tab_content" hidden="{{activeIndex != 0}}">
 
       <view class="content">
 

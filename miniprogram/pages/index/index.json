@@ -1,6 +1,7 @@
 {
   "usingComponents": { 
     "checkBlock": "/components/checkBox/index",
-    "add":"/components/add/index"
+    "add":"/components/add/index",
+    "questionCard":"/components/questionCard/index"
 }
 }
