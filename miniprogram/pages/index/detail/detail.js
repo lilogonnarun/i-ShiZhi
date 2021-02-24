@@ -1,9 +1,12 @@
 // pages/index/detail/detail.js
 Page({
   data: {
-    /*-------------------------------------------------------------------------------可以删除*/
-    imageUrls: [],
-    name: '子木仁一',
+    id:"2",
+    imageUrls:[
+      '/images/pic1.jpg','/images/pic2.jpg','/images/pic3.jpg'
+    ],
+    authorName: '子木仁一',
+    authorAvatar:'/images/person.png',
     title: '这个是主题/标题',
     content: '这个地方是文本内容哦，可以在这里写东西，想写什么写什么~~',
     comments: [{
@@ -22,38 +25,58 @@ Page({
     comment_num: 3,
     collect_num: 32,
     like_num: 124,
-    /*----------------------------------------------------------------------------------------*/
     comment: "这完全是一条模板评论",
     showComments: false,
-    contents: [],
     /*TODO: 获取用户openid */
-    openId: "12312",
-
+    openId: "12312"
   },
 
   /*初始化加载 */
   onLoad: function (options) {
-    var contents=""
     /*获取内容 */
-    console.log("获取内容");
-    console.log(options.detail)
-    contents = options.detail
-    console.log(contents);
+    var openId="12312";
+    var id="2";
+    let that =this;
+    let o=options;
+
+    o.img1=decodeURIComponent(o.img1)
+    o.img2=decodeURIComponent(o.img2)
+    o.img3=decodeURIComponent(o.img3)
+    o.img4=decodeURIComponent(o.img4)
+    o.img5=decodeURIComponent(o.img5)
+    o.img6=decodeURIComponent(o.img6)
+    o.img7=decodeURIComponent(o.img7)
+    o.img8=decodeURIComponent(o.img8)
+    o.img9=decodeURIComponent(o.img9)
+
+    if(o.authorAvatar != "null"){that.setData({ authorAvatar:o.authorAvatar})}
+    if(o.authorName != "null"){that.setData({authorName:o.authorName})}
+    if(o.title!= "null"){that.setData({title:o.title})}
+    if(o.content!="null"){that.setData({content:o.content})}
+    if(o.comments!="null"){that.setData({comment_num:o.comments})}
+    if(o.collects!="null"){that.setData({collect_num:o.collects})}
+    if(o.likes!="null"){that.setData({like_num:o.likes})}
+    if(o.id!="null"){that.setData({id:o.id})}
+    if(o.openId!=null){that.setData({openId:o.openId})}
+    that.setData({
+      imageUrls:[o.img1,o.img2,o.img3,o.img4,o.img5,o.img6,o.img7,o.img8,o.img9],
+    })
+   
+      console.log()
       /*获取评论 */
       wx.request({
         url: 'http://java.maozj.site:8080/api/main/get-comments',
         data: {
-          id: "2",
-          openId: "12312"
+          id: id,
+          openId: openId
         },
+        
         headers: {
           'content-type': 'application/json' // 默认值
         },
         method: 'GET',
         success: res => {
-          console.log("获取评论")
-          console.log(res);
-          contents: res.data
+          this.setData({comments: res.data.content})
         },
       })
     },
