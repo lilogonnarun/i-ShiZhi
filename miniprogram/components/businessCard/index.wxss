@@ -4,22 +4,33 @@
   margin-top: 20rpx;
 }
 .Card_List .card {
+  
   padding: 20rpx 25rpx;
   box-shadow: 0rpx 0rpx 20rpx 10rpx rgba(85, 85, 85, 0.10);
   border-radius: 20rpx;
 }
 .Card_List .card .head {
-  
-  flex-wrap: wrap;
+  display: flex;
+  height: 110rpx;
+}
+.Card_List .card .head .head_block{
+ 
+  width: 350rpx;
+  display: block;
+
+}
+.Card_List .card .head .head_block .head_group{
+  display: flex;
+  margin-bottom:15rpx;
 }
 .Card_List .card .head .head_photo {
  
   display: flex;
   margin-left: 5rpx;
-  margin-right: 40rpx;
+  margin-right: 20rpx;
   margin-bottom: 20rpx;
-  width: 160rpx;
-  height: 120rpx;
+  width: 150rpx;
+  height: 100rpx;
   border-radius: 50%;
   background: #fff;
   align-self: center;
@@ -31,19 +42,23 @@
   will-change: transform;
 }
 .Card_List .card .head .right-top {
-  width: 400rpx;
+ 
+  width: 500rpx;
   color: rgba(0, 0, 255, 0.685);
   font-size: small;
   font-weight: 1000;
-  float: right;
   text-align: right;
+ 
+}
+.Card_List .card .head .right-top .minute{
+  overflow: hidden;
 }
 .Card_List .card .head .name_group{
   width: 1000rpx;
   display: flex;
 }
 .Card_List .card .head .head_name {
-  display: flex;;
+  display: flex;
   margin-top: 10rpx;
 }
 .Card_List .card .head .qualify_photo {
@@ -62,16 +77,47 @@
 
 }
 .Card_List .card .mid{
-
+  font-size: 28rpx;
+  font-weight: 800;
+  
 }
 .Card_List .card .mid .topic{
+  margin-top: 10rpx;
+  display: flex;
 
 }
+.Card_List .card .mid .topic .wrap{
+  margin-left: 30rpx;
+  
+  display: block;
+}
 .Card_List .card .mid .time{
+  display: flex;
+
+}
+.Card_List .card .mid .time .time_light{
+ 
+  font-weight: 100rpx;
 
 }
 .Card_List .card .fee{
+ 
+  font-size: small;
+  color:  rgba(0, 0, 255, 0.685);
+  text-align: right;
+  font-weight: 1000;
+}
 
+.Card_List .card .mid .specialty_list{
+  
+  display: flex;
+  font-weight: 100rpx;
+}
+.Card_List .card .mid .specialty_list .specialty{
+ font-size: 25rpx;
+  margin-left: 50rpx;
+  font-weight: 500;
+  color: #4d4d4d;
 }
 .Card_List .card .mid .specialty_list .star{
   width: 30rpx;
@@ -93,9 +139,9 @@
   font-size: 30rpx;
 }
 .Card_List .card .head .background {
-  font-size: smaller;
+  font-size: 20rpx;
   color: #4d4d4d;
-  display:table-column-group;
+  
 }
 .Card_List .card .specialty {
   margin-left: 20rpx;

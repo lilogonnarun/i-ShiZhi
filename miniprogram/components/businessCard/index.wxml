@@ -10,20 +10,25 @@
 	<view class="card">
 		<!-- 名片的上面的部分-名字加背景 -->
 		<view class="head">
-
 			<view class="head_photo">
 				<image src="/images/person.png" />
 			</view>
-			<view class="head_name">
-				<view class="name">{{item.name}}</view>
-			</view>
-			<!--认证图标-->
-			<view class="qualify_photo">
-				<image src="/images/qualified.png" />
-			</view>
+			<view class="head_block">
 
-			<view class="background">{{item.introduction}}</view>
+				<view class="head_group">
 
+					<view class="head_name">
+						<view class="name">{{item.name}}</view>
+					</view>
+					<!--认证图标-->
+					<view class="qualify_photo">
+						<image src="/images/qualified.png" />
+					</view>
+
+				</view>
+				<view class="background">{{item.introduction}}</view>
+
+			</view>
 			<!--预约分钟-->
 			<view class="right-top">
 				<view class="minute">
@@ -33,29 +38,38 @@
 					{{item.score}}/5
 				</view>
 			</view>
-
 		</view>
 
 		<!--名片中部，显示空闲时间和擅长话题-->
 		<view class="mid">
-			<view class="time">可预约的时间： {{item.availableTime}}</view>
-			<view class="topic">擅长话题:</view>
-			<view
-			 class="specialty_list"
-			 wx:for="{{item.specialty}}"
-			 wx:for-item="item2"
-			 wx:for-index="index2"
-			 wx:key="index2"
-			>
-				<view class="star">
-					<image src="/images/star.png" />
+			<view class="time">可预约的时间：
+				{{item.availableTime}}</view>
+
+			<view class="topic">擅长话题:
+				<view class="wrap">
+					<view
+					 class="specialty_list"
+					 wx:for="{{item.specialty}}"
+					 wx:for-item="item2"
+					 wx:for-index="index2"
+					 wx:key="index2"
+					>
+						<view class="star">
+							<image src="/images/star.png" />
+						</view>
+						<view class="specialty">{{item2}}</view>
+					</view>
 				</view>
+
 			</view>
+
 		</view>
 		<!-- 名片下部，咨询费 -->
+
 		<view class="fee">
-			咨询费： {{appointFee}}元/10分钟
+			咨询费： {{item.appointFee}}元/10分钟
 		</view>
 	</view>
+
 </view>
 
