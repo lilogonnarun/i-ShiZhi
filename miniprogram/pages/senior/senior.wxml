@@ -1,100 +1,47 @@
 <!--pages/senior/senior.wxml-->
-<!-- 搜索框 -->
-<view style="height:80rpx;">
-  <view class="search-form" bindtap="gotoSearch">
-    <image style="padding-left:30rpx;width:40rpx;height:40rpx" src="/images/search.png"></image>
-    <view style="padding-left:20rpx;color:#adadad;font-size:28rpx">咨询</view>
-  </view>
-</view>
+
 <!-- 轮播图 -->
-<swiper autoplay="{{true}}" interval="5000" circular="{{true}}" indicator-dots="{{true}}">
-  <swiper-item>
-    <image mode="widthFIx" src="/images/pic1.jpg" />
-  </swiper-item>
-  <swiper-item>
-    <image mode="widthFIx" src="/images/pic2.jpg" />
-  </swiper-item>
-  <swiper-item>
-    <image mode="widthFIx" src="/images/pic3.jpg" />
-  </swiper-item>
+<swiper
+ autoplay="{{true}}"
+ interval="5000"
+ circular="{{true}}"
+ indicator-dots="{{true}}"
+>
+	<swiper-item>
+		<image mode="widthFIx" src="/images/pic1.jpg" />
+	</swiper-item>
+	<swiper-item>
+		<image mode="widthFIx" src="/images/pic2.jpg" />
+	</swiper-item>
+	<swiper-item>
+		<image mode="widthFIx" src="/images/pic3.jpg" />
+	</swiper-item>
 </swiper>
 <!-- 导航栏 -->
-<view class="nav">
-  <!-- 单个图标 -->
-  <navigator class="single">
-    <view>
-      <image class="image_nav" src="/images/chuangye.png" style="width:60rpx;height:60rpx"></image>
-    </view>
-    <text class="image_text">创业</text>
-  </navigator>
-  <navigator class="single">
-    <view>
-      <image class="image_nav" src="/images/kaoyan.png" />
-    </view>
-    <text class="image_text">考研</text>
-  </navigator>
-  <navigator class="single">
-    <view>
-      <image class="image_nav" src="/images/liuxue.png" />
-    </view>
-    <text class="image_text">留学</text>
-  </navigator>
-  <navigator class="single">
-    <view>
-      <image class="image_nav" src="/images/shixi.png" />
-    </view>
-    <text class="image_text">实习</text>
-  </navigator>
+<view class="top_section" style="margin:0rpx,0rpx">
+	<view class="navbar">
+		<block wx:for="{{tabs}}" wx:key="*this">
+			<view id="{{index}}" class="navbar-item {{activeIndex == index ? 'on' : ''}}" bindtap="tabClick">
+				<view class="navbar__title">{{item}}</view>
+				<view class="navbar_underline {{activeIndex == index ? 'on' : ''}}" />
+			</view>
+		</block>
+	</view>
 </view>
-<view class="nav" style="margin-top:40rpx">
-  <navigator class="single">
-    <view>
-      <image class="image_nav" src="/images/baoyan.png"></image>
-    </view>
-    <text class="image_text">保研</text>
-  </navigator>
-  <navigator class="single">
-    <view>
-      <image class="image_nav" src="/images/work.png" />
-    </view>
-    <text class="image_text">就业</text>
-  </navigator>
-  <navigator class="single">
-    <view>
-      <image class="image_nav" src="/images/changeMajor.png" />
-    </view>
-    <text class="image_text">转专业</text>
-  </navigator>
-  <navigator class="single">
-    <view>
-      <image class="image_nav" src="/images/doctor.png" style="width:60rpx;height:60rpx" />
-    </view>
-    <text class="image_text">读博</text>
-  </navigator>
+<!--滑动模块-->
+<view class="tab_content" hidden="{{activeIndex != 0}}">
+<businessCard/>
 </view>
-<!-- 为你推荐 -->
-<view class="Recommend">
-  <image src="/images/recommend.png" />
-  <text>为你推荐</text>
-</view>
-<!-- 名片数组 -->
-<view class="Card_List" wx:for="{{card_list}}" wx:for-item="item" wx:for-index="index" wx:key="id">
-  <!-- 单个名片 -->
-  <view class="card">
-    <!-- 名片的上面的部分-名字加背景 -->
-    <view class="head">
-      <view class="head_photo">
-        <image src="/images/person.png" />
-      </view>
-      <view class="head_name">
-        <view class="name">名字：{{item.name}}</view>
-        <view class="background">背景：{{item.background}}</view>
-      </view>
-    </view>
-    <!-- 名片下面的部分-特长 -->
-    <view class="specialty_list" wx:for="{{item.specialty}}" wx:for-item="item2" wx:for-index="index2" wx:key="index2">
-      <view class="specialty">特长：{{item2}}</view>
-    </view>
+<view class="tab_content" hidden="{{activeIndex != 1}}" >
+  <businessCard/>
   </view>
+<view class="tab_content" hidden="{{activeIndex != 2}}" >
+  <businessCard/>
+  </view>
+<view class="tab_content" hidden="{{activeIndex != 3}}" >
+  <businessCard/>
 </view>
+
+
 <text>\n</text>
+

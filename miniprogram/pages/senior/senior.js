@@ -1,37 +1,20 @@
 // pages/senior/senior.js
 Page({
 
-  /**
+  /*
    * 页面的初始数据
    */
   data: {
-    card_list:[
-      {
-        id:0,
-        name:"jimmy",
-        background:["szu","china"],
-        specialty:["basketball","study"],
-      },
-      {
-        id:1,
-        name:"my",
-        background:["geu","china"],
-        specialty:["draw","study"],
-      },
-      {
-        id:2,
-        name:"jimmy",
-        background:["szu","china"],
-        specialty:["basketball","study"],
-      },
-      {
-        id:3,
-        name:"jimmy",
-        background:["szu","china"],
-        specialty:["basketball","study"],
-      }
-    ]
+    activeIndex:0,
+    tabs:['推荐','深大','职场','其他'],
+    
   },
+    // 切换列表
+    tabClick: function (e) {
+      this.setData({
+        activeIndex: e.currentTarget.id
+      })
+    },
   onLoad: function (options) {
 
   },
