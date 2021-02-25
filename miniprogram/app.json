@@ -18,9 +18,9 @@
     "pages/mine/attention/attention"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#075EAE",
+    "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTitleText": "i仕职",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "black"
   },
   "usingComponents": {
   

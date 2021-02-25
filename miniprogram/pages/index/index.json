@@ -1,7 +1,9 @@
 {
   "usingComponents": { 
-    "checkBlock": "/components/checkBox/index",
-    "add":"/components/add/index",
+    "leftDiscoveryCard":"/components/leftDiscoveryCard/index",
+    "rightDiscoveryCard":"/components/rightDiscoveryCard/index",
+    "checkBlock": "/components/checkBlock/index",
+    "addIcon":"/components/addIcon/index",
     "questionCard":"/components/questionCard/index"
 }
 }

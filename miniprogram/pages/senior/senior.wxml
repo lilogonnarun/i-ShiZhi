@@ -3,7 +3,7 @@
 <view style="height:80rpx;">
   <view class="search-form" bindtap="gotoSearch">
     <image style="padding-left:30rpx;width:40rpx;height:40rpx" src="/images/search.png"></image>
-    <view style="padding-left:20rpx;color:#adadad;font-size:28rpx">找大佬</view>
+    <view style="padding-left:20rpx;color:#adadad;font-size:28rpx">咨询</view>
   </view>
 </view>
 <!-- 轮播图 -->
