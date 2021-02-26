@@ -30,6 +30,7 @@
 </view>
 <!--滑动模块-->
 <view class="tab_content" hidden="{{activeIndex != 0}}">
+<!--咨询师由前到后的排列顺序由咨询师的经验积分决定-->
 <businessCard/>
 </view>
 <view class="tab_content" hidden="{{activeIndex != 1}}" >

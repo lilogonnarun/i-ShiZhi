@@ -1,0 +1,160 @@
+ 
+   .card {
+    
+    padding: 20rpx 25rpx;
+    box-shadow: 0rpx 0rpx 20rpx 10rpx rgba(85, 85, 85, 0.10);
+    border-radius: 20rpx;
+  }
+   .card .head {
+    display: flex;
+    height: 100rpx;
+    margin-bottom: 10rpx;
+   
+  }
+   .card .head .head_block{
+   
+    width: 350rpx;
+    display: block;
+  
+  }
+   .card .head .head_block .head_group{
+    display: flex;
+    margin-bottom:15rpx;
+  }
+   .card .head .head_photo {
+   
+    display: flex;
+    margin-left: 5rpx;
+    margin-right: 20rpx;
+    margin-bottom: 20rpx;
+    width: 150rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    background: #fff;
+    align-self: center;
+  }
+   .card .head .head_photo image {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    will-change: transform;
+  }
+   .card .head .right-top {
+   
+    width: 500rpx;
+    color: rgba(0, 0, 255, 0.685);
+    font-size: small;
+    font-weight: 1000;
+    text-align: right;
+    display: flex;
+   
+  }
+  .card .head .right-top .appoint_button button{
+    margin-left: 50rpx;
+    width: 180rpx;
+    height: 70rpx;
+    align-self: right;
+    font-size: small;
+    font-weight: 400;
+    background-color: blue; 
+    }
+   .card .head .right-top .minute{
+    overflow: hidden;
+  }
+   .card .head .name_group{
+    border-style: dashed;
+    width: 1000rpx;
+    display: flex;
+  }
+   .card .head .head_name {
+    display: flex;
+    margin-top: 10rpx;
+  }
+   .card .head .qualify_photo {
+    width: 60rpx;
+    height: 50rpx;
+    display: flex;
+    border-radius: 100%;
+    
+  
+  }
+   .card .head .qualify_photo image{
+    margin-left: 50rpx;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    will-change: transform;
+  
+  }
+   .card .mid{
+    font-size: 28rpx;
+    font-weight: 800;
+    
+  }
+   .card .mid .topic{
+    margin-top: 10rpx;
+    display: flex;
+  
+  }
+   .card .mid .topic .wrap{
+    margin-left: 30rpx;
+    
+    display: block;
+  }
+   .card .mid .time{
+    display: flex;
+  
+  }
+   .card .mid .time .time_light{
+   
+    font-weight: 100rpx;
+  
+  }
+   .card .fee{
+   
+    font-size: small;
+    color:  rgba(0, 0, 255, 0.685);
+    text-align: right;
+    font-weight: 1000;
+  }
+  
+   .card .mid .specialty_list{
+    
+    display: flex;
+    font-weight: 100rpx;
+  }
+   .card .mid .specialty_list .specialty{
+   font-size: 25rpx;
+    margin-left: 50rpx;
+    font-weight: 500;
+    color: #4d4d4d;
+  }
+   .card .mid .specialty_list .star{
+    width: 30rpx;
+    height: 30rpx;
+    border-radius: 100%;
+    
+    will-change: transform;
+  }
+  
+   .card .mid .specialty_list .star image{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    will-change: transform;
+  }
+   .card .head .head_name .name {
+    text-size-adjust: 20rpx;
+    font-weight: 600;
+    font-size: 30rpx;
+  }
+   .card .head .background {
+    font-size: 20rpx;
+    color: #4d4d4d;
+    
+  }
+   .card .specialty {
+    margin-left: 20rpx;
+    line-height: 1.5;
+    font-size: 28rpx;
+  }

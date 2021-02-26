@@ -11,7 +11,9 @@
 }
 .Card_List .card .head {
   display: flex;
-  height: 110rpx;
+  height: 100rpx;
+  margin-bottom: 10rpx;
+ 
 }
 .Card_List .card .head .head_block{
  

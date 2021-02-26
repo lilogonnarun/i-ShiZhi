@@ -1,15 +1,4 @@
-<!-- 名片数组 -->
-<view
- class="Card_List"
- wx:for="{{card_list}}"
- wx:for-item="item"
- wx:for-index="index"
- wx:key="id"
- data-detail="{{item}}"
- bindtap="goToDetail"
->
-
-	<!-- 单个名片 -->
+<!-- 单个名片 -->
 	<view class="card" >
 		<!-- 名片的上面的部分-名字加背景 -->
 		<view class="head">
@@ -21,7 +10,7 @@
 				<view class="head_group">
 
 					<view class="head_name">
-						<view class="name">{{item.name}}</view>
+						<view class="name">{{name}}</view>
 					</view>
 					<!--认证图标-->
 					<view class="qualify_photo">
@@ -30,17 +19,20 @@
 
 				</view>
 				<!--限定字符串长度-->
-				<view class="background">{{item.introduction}}</view>
+				<view class="background">{{introduction}}</view>
 
 			</view>
 			<!--预约分钟-->
 			<view class="right-top">
-				<view class="minute">
-					已被预约的分钟数：{{item.appointMinute}}
+                <view class="score">
+					{{score}}/5
 				</view>
-				<view class="score">
-					{{item.score}}/5
+				<view class="appoint_button">
+					<button class="btn" type="primary" loading="{{loading}}" disabled="{{disabled}}" bindtap="onTap">
+                    预约
+                    </button>
 				</view>
+				
 			</view>
 		</view>
 
@@ -48,13 +40,13 @@
 		<view class="mid">
 		<!--限定字符串长度-->
 			<view class="time">可预约的时间：
-				{{item.availableTime}}</view>
+				{{availableTime}}</view>
 
 			<view class="topic">擅长话题:
 				<view class="wrap">
 					<view
 					 class="specialty_list"
-					 wx:for="{{item.specialty}}"
+					 wx:for="{{specialty}}"
 					 wx:for-item="item2"
 					 wx:for-index="index2"
 					 wx:key="index2"
@@ -72,9 +64,6 @@
 		<!-- 名片下部，咨询费 -->
 
 		<view class="fee">
-			咨询费： {{item.appointFee}}元/10分钟
+			咨询费： {{appointFee}}元/10分钟
 		</view>
 	</view>
-
-</view>
-

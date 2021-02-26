@@ -35,8 +35,8 @@ Component({
       {
         id:2,
         name:"jimmy",
-        introduction:"国内头部券商工作，介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍",
-        availableTime:"周一晚8：00 - 10：00,周二晚8：00 - 10：00,周六晚8：00 - 10：00,周日晚8：00 - 10：00",
+        introduction:"介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍",
+        availableTime:"周一晚8：00 - 10：00",
         specialty:["跨专业考研金融"],
         appointFee:0,
         appointMinute:120,
@@ -44,7 +44,7 @@ Component({
       },
       {
         id:3,
-        name:"iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii",
+        name:"iiiiiiiiiiiiiiiiiii",
         introduction:"国内头部券商工作",
         availableTime:"未指定",
         specialty:["跨专业考研金融","8个月冲刺上财","背景提升"],
@@ -59,6 +59,12 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    goToDetail(e){
+      const detail = e.currentTarget.dataset.detail;
+      console.log(detail)
+      wx.navigateTo({url:'/pages/senior/seniorIndex/index?name='+detail.name+'&introduction='+detail.introduction+'&avaliableTime='+detail.availableTime+'&specialty='+detail.specialty+'&appointFee='+detail.appointFee+'&appointMinute='+detail.appointMinute+'&score='+detail.score+''})
+    }
 
   }
+  
 })
