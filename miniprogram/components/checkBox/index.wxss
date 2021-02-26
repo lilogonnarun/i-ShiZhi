@@ -1,0 +1,28 @@
+.item1{
+  margin: 20rpx 20rpx;
+  margin-top: 20rpx;
+  border-style: ridge;
+  background-color:blanchedalmond;
+  padding: 10rpx;
+  border-radius: 10rpx;
+  display: flex;
+  align-content: center;
+}
+.block-title{
+  font-size: 28rpx;
+  font-weight: 1000;
+  width: 300rpx;
+  align-self: center;
+}
+.block-desc{
+  font-size: 22rpx;
+  color: grey;
+  font-weight: 220;
+}
+image{
+margin-left: 20rpx;
+align-self: center;
+width: 50rpx;
+height : 35rpx;
+  
+}

@@ -1,0 +1,101 @@
+<!--TODO:下拉刷新-->
+<view class="statusBar" style="height:{{statusBarHeight}}px;"></view>
+<view>
+  <!-- 顶部导航栏 -->
+  <view class="top_section" style="margin-top:{{statusBarHeight}}px">
+    <image src="/images/search.png" class="search" bindtap="gotoSearch" />
+    <view class="navbar">
+      <block wx:for="{{tabs}}" wx:key="*this">
+        <view id="{{index}}" class="navbar-item {{activeIndex == index ? 'on' : ''}}" bindtap="tabClick">
+          <view class="navbar__title">{{item}}</view>
+          <view class="navbar_underline {{activeIndex == index ? 'on' : ''}}"></view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <!-- 主体内容 -->
+  <view class="tab_panel" style="margin-top:{{statusBarHeight+44}}px;">
+    <!-- 顶部分类栏 -->
+    <view style="display:flex;">
+      <scroll-view scroll-x="{{true}}" class="sort_list_box">
+        <view wx:for="{{sorts}}" wx:key="key" class="sort_list">
+          <view class="sort_item">{{item}}</view>
+        </view>
+      </scroll-view>
+      <view class="sortList_more">
+        <image src="/images/down.png" bindtap="lookMore" />
+      </view>
+    </view>
+    <!-- 关注列表 -->
+    <view class="tab_content" hidden="{{activeIndex != 0}}">
+
+      关注
+
+    </view>
+    <!-- 发现列表 -->
+    <view class="tab_content" hidden="{{activeIndex != 1}}">
+
+      <view class="content">
+
+        <view class="column">
+          <block wx:for="{{cards.content}}" wx:key="index">
+          <!--pass data 'id' to js-->
+            <view class="box" wx:if="{{index%2==0}}" bindtap="gotoDetail" data-detail="{{item}}"> <!-- 奇偶分开放 -->
+              <image src="{{item.img1}}" class="content_pic" mode="widthFix" />
+              <view class="title">{{item.title}}</view>
+              <view class="bottom_row">
+                <view class="row">
+                  <view class="userAvatarUrl">
+                    <open-data type="userAvatarUrl"></open-data>
+                  </view>
+                  <view class="userNickName">{{item.userId}}</view>
+                </view>
+                <view class="row">
+                  <image src="/images/likes.png" class="likes" />
+                  <view class="likes_num">{{item.likes}}</view>
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+
+
+        <view class="column">
+          <block wx:for="{{cards.content}}" wx:key="index">
+            <view class="box" wx:if="{{index%2==1}}" bindtap="gotoDetail" data-contentDetail="{{item}}"> <!-- 奇偶分开放 -->
+              <image src="{{item.img1}}" class="content_pic" mode="widthFix" />
+              <view class="title">{{item.title}}</view>
+              <view class="bottom_row">
+                <view class="row">
+                  <view class="userAvatarUrl">
+                    <open-data type="userAvatarUrl"></open-data>
+                  </view>
+                  <view class="userNickName">{{item.userId}}</view>
+                </view>
+                <view class="row">
+                  <image src="/images/likes.png" class="likes" />
+                  <view class="likes_num">{{item.likes}}</view>
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+
+      </view>
+      
+    </view>
+  </view>
+  <add/>
+</view>
+
+<!-- 分类栏列表更多内容 -->
+<view wx:if="{{showPopup}}" class="popup_shade" bindtap="closePopup" style="padding-top:{{statusBarHeight+45}}px;" catchtouchmove="true">
+   <view wx:if="{{showPopup}}" class="popup" catchtap="none">
+    <view class="top_row">
+      <view class="title">推荐</view>
+      <image src="/images/up.png" bindtap="closePopup" />
+    </view>
+    <!--TODO : 修改为新组件-->
+    <checkBlock/>
+  </view> 
+</view>

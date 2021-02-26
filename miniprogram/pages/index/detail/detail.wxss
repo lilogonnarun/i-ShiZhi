@@ -1,0 +1,93 @@
+/* pages/index/detail/detail.wxss */
+/* 轮播图样式 */
+.swipercontainer {
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 500rpx;
+}
+.swipimg {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.topLine{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20rpx 40rpx;
+}
+.personInfo{
+  display: flex;
+  align-items: center;
+}
+.topLine image.avatar{
+  width: 100rpx;
+  height: 100rpx;
+}
+.topLine .name{
+  font-size: 28rpx;
+  font-weight: 600;
+  margin-left: 30rpx;
+}
+.topLine .focus_button{
+  border: 1px solid #075EAE;
+  color: #075EAE;
+  font-size: 28rpx;
+  font-weight: 600;
+  line-height: 1;
+  padding: 15rpx 40rpx;
+  border-radius: 30rpx;
+}
+.content{
+  margin: 20rpx 40rpx;
+  margin-top: 40rpx;
+}
+.content .title{
+  font-size: 32rpx;
+  font-weight: 600;
+  margin: 20rpx 0;
+}
+.content .text-content{
+  font-size: 28rpx;
+  color: #2b2b2b;
+}
+.comment_box{
+  margin: 20rpx 40rpx;
+  margin-top: 40rpx;
+  background-color: rgb(236, 239, 255);
+  padding: 20rpx;
+  border-radius: 20rpx;
+}
+.comment_box .comment{
+  font-size: 28rpx;
+  line-height: 1.6;
+}
+.comment_box .comment .name{
+  font-weight: 600;
+}
+.bottom{
+  border-top: 1px solid #e2e2e2;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 30rpx;
+  bottom: 0;
+  background-color: white;
+  width: 92%;
+}
+.bottom .box{
+  display: flex;
+  align-items: center;
+}
+.bottom .number{
+  font-size: 27rpx;
+  color: #515151;
+  font-weight: 600;
+  margin-left: 10rpx;
+}
+.bottom image.icon{
+  width: 40rpx;
+  height: 40rpx;
+}

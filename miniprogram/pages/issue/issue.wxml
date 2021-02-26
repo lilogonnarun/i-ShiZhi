@@ -1,0 +1,19 @@
+<!--pages/issue/issue.wxml-->
+<view class="line">
+  <view class="title">标题：</view>
+  <input maxlength="30" bindinput="getTitle" />
+</view>
+<view class="upload">
+  <view class="title">内容：</view>
+  <textarea type="idcard" bindinput="getContent" maxlength="-1" show-confirm-bar="{{false}}" />
+</view>
+<view class="upload">
+  <view class="title">图片：</view>
+  <block wx:for="{{info.uploadImgs}}" wx:key="index">
+    <image src="{{item}}" bindtap="upload" />
+  </block>
+  <image src="/images/uploadImg.png" bindtap="upload" />
+</view>
+<view style="display:flex;justify-content:center">
+  <view bindtap="issue" class="issue_button">发布</view>
+</view>

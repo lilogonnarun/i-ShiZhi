@@ -1,0 +1,6 @@
+{
+  "usingComponents": { 
+    "checkBlock": "/components/checkBox/index",
+    "add":"/components/add/index"
+}
+}

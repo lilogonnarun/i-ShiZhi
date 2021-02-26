@@ -1,0 +1,12 @@
+/* components/add/index.wxss */
+.icon{
+  position: sticky;
+  
+  float: left;
+  bottom: 10%;
+}
+.icon .img{
+  
+  height: 100rpx;
+  width: 100rpx;
+}

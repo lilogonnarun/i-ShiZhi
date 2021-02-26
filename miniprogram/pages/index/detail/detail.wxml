@@ -1,0 +1,61 @@
+<!--pages/index/detail/detail.wxml-->
+<view class='swipercontainer'>
+  <swiper duration="100" circular='{{true}}' indicator-dots="{{true}}" style="height:500rpx">
+    <view wx:for="{{contents.content}}" wx:key="index">
+      <swiper-item data-id="{{index}}">
+        <image src="{{item}}" class="swipimg" />
+      </swiper-item>
+    </view>
+  </swiper>
+</view>
+<view class="topLine">
+  <view class="personInfo">
+    <image src="/images/person.png" class="avatar" />
+    <view class="name">{{name}}</view>
+  </view>
+  <!--JUDGE IF THE USER HAS FOLLOWED-->
+  <view class="focus_button">关注</view>
+</view>
+<view class="content">
+  <view class="title">{{title}}</view>
+  <view class="text_content">{{content}}</view>
+</view>
+<view class="comment_box">
+  <view wx:for="{{comments}}" wx:key="index">
+    <view class="comment">
+      <text class="name">{{item.name}}：</text>
+      <!--NEW DATABASE-->
+      <text class="comment_content">{{item.comment}}</text>
+    </view>
+  </view>
+</view>
+<view class="bottom">
+  <view class="box">
+  <!--添加toast提示-->
+  <!--点亮图标-->
+  <!--TODO: 下方弹窗，可输入数据-->
+  <!--TODO : 不可上传空评论-->
+    <image class="icon" src="/images/comment.png" bindtap="addComment"/>
+    <view class="number">{{comment_num}}</view>
+  </view>
+  <view class="box">
+    <view class="box">
+      <image class="icon" src="/images/collect.png" bindtap="addCollect"/>
+      <view class="number">{{collect_num}}</view>
+    </view>
+    <view class="box" style="margin-left: 20rpx;">
+      <image class="icon" src="/images/like.png" bindtap="addLike"/>
+      <view class="number">{{like_num}}</view>
+    </view>
+  </view>
+</view>
+<view wx:if="{{showComments}}" class="popup_shade" bindtap="closeComments" catchtouchmove="true">
+   <view wx:if="{{showComments}}" class="popup" catchtap="none">
+    <view class="top_row">
+      <view class="title">评论</view>
+      <image src="/images/up.png" bindtap="closeComments" />
+    </view>
+    <!--TODO : 修改为新组件-->
+    <checkBlock/>
+  </view> 
+</view>

@@ -1,0 +1,3 @@
+<!--pages/mine/history/history.wxml-->
+<import src="../../template/template.wxml" />
+<template is="empty"></template>
