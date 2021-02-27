@@ -1,0 +1,145 @@
+<!-- 单个名片 -->
+<view class="card">
+	<!-- 名片的上面的部分-名字加背景 -->
+	<view class="head">
+		<view class="head_photo">
+			<image src="/images/person.png" />
+		</view>
+		<view class="head_block">
+
+			<view class="head_group">
+
+				<view class="head_name">
+					<view class="name">{{name}}</view>
+				</view>
+				<!--认证图标-->
+				<view class="qualify_photo">
+					<image src="/images/qualified.png" />
+				</view>
+
+			</view>
+			<!--限定字符串长度-->
+			<view class="background">{{introduction}}</view>
+
+		</view>
+		<!--预约分钟-->
+		<view class="right-top">
+
+			<view class="score">
+				{{score}}/5
+			</view>
+			<view class="appoint_button">
+				<button
+				 class="btn"
+				 type="primary"
+				 loading="{{loading}}"
+				 disabled="{{disabled}}"
+				 bindtap="onTap"
+				>
+					预约
+				</button>
+			</view>
+
+		</view>
+	</view>
+
+	<!--名片中部，显示空闲时间和擅长话题-->
+	<view class="mid">
+		<!--限定字符串长度-->
+		<view class="appointMinute">
+			已被预约分钟数：{{appointMinute}}
+		</view>
+		<view class="fee">
+			咨询费： {{appointFee}}元/10分钟
+		</view>
+		<view class="time">
+			可预约的时间:{{availableTime}}
+		</view>
+	</view>
+	<!-- 详细介绍-->
+	<view class="main">
+		<view class="caption">擅长领域
+		</view>
+		<view class="specialty_area">
+			<view wx:for="{{specialtyArea}}">
+				<button
+				 class="btn"
+				 type="primary"
+				 loading="{{loading}}"
+				 disabled="{{disabled}}"
+				 bindtap="onTap"
+				>
+					{{item}}
+				</button>
+			</view>
+		</view>
+
+		<view class="caption">个人简介</view>
+		<view class="introduction">
+			{{introduction}}
+		</view>
+		<view class="caption">
+			擅长话题
+		</view>
+		<view class="topic">
+
+			<view
+			 class="specialty_list"
+			 wx:for="{{specialty}}"
+			 wx:for-item="item2"
+			 wx:for-index="index2"
+			 wx:key="index2"
+			>
+				<view class="wrap">
+					<view class="star">
+						<image src="/images/star.png" />
+					</view>
+					<view class="title">{{item2.title}}</view>
+				</view>
+
+				<view class="content">{{item2.content}}</view>
+			</view>
+
+		</view>
+		<view class="caption">
+			评价 {{commentNum}}
+		</view>
+		<view class="comment">
+
+			<view wx:for="{{comments}}" class="commentCard">
+				<view class="wrap">
+					<view class="head">
+						<view class="avatar" hidden="{{false}}">
+							<image src="{{item.avatar}}" />
+						</view>
+						<view class="name">
+							{{item.name}}
+						</view>
+					</view>
+					<view class="qualify_photo">
+						<image src="/images/qualified.png" hidden="{{item.Qualified != true}}" />
+					</view>
+					<view class="like">
+						<image src="/images/likes-active.png"/>{{comments.likeNum}}
+					</view>
+				</view>
+
+				<view class="body">
+					<view class="comment">
+						{{item.comment}}
+					</view>
+				</view>
+				<view class="foot">
+					<view class="publishTime">
+						{{item.publishTime}}
+					</view>
+					<view class="rating">
+						<image url="" />
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+
+</view>
+
