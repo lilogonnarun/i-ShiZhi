@@ -17,7 +17,9 @@ Component({
         name:"jimmy",
         introduction:"国内头部券商工作",
         availableTime:"未指定",
-        specialty:["跨专业考研金融","8个月冲刺上财","背景提升"],
+        specialty:[{title:"跨专业考研金融",content:"Xxxxxxxxxxxxxxxxxx"},
+        {title:"8个月冲刺上财",content:"xxxxxxxxxxxxxx"},
+        {title:"背景提升",content:"xxxxxxxxxxx"}],
         appointFee:0,
         appointMinute:120,
         score:4.75
@@ -27,7 +29,9 @@ Component({
         name:"张三",
         introduction:"国内头部券商工作",
         availableTime:"周一晚8：00 - 10：00",
-        specialty:["跨专业考研金融","8个月冲刺上财","背景提升","跨专业考研金融","8个月冲刺上财","背景提升"],
+        specialty:[{title:"跨专业考研金融",content:"Xxxxxxxxxxxxxxxxxx"},
+        {title:"8个月冲刺上财",content:"xxxxxxxxxxxxxx"},
+        {title:"背景提升",content:"xxxxxxxxxxx"}],
         appointFee:100,
         appointMinute:2000,
         score:5
@@ -37,7 +41,8 @@ Component({
         name:"jimmy",
         introduction:"介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍",
         availableTime:"周一晚8：00 - 10：00",
-        specialty:["跨专业考研金融"],
+        specialty:[{title:"跨专业考研金融"},
+        {content:"xxxxxxxxxxxxxxxxx"}],
         appointFee:0,
         appointMinute:120,
         score:4.75
@@ -47,7 +52,7 @@ Component({
         name:"iiiiiiiiiiiiiiiiiii",
         introduction:"国内头部券商工作",
         availableTime:"未指定",
-        specialty:["跨专业考研金融","8个月冲刺上财","背景提升"],
+        specialty:[{title:"8个月冲刺上财",content:"xxxxxxxxxxxxxxxxxxx"}],
         appointFee:1000,
         appointMinute:6666,
         score:4.75

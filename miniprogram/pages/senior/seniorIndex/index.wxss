@@ -12,14 +12,30 @@
    
   }
    .card .head .head_block{
-   
     width: 350rpx;
     display: block;
   
   }
    .card .head .head_block .head_group{
+    
     display: flex;
     margin-bottom:15rpx;
+  }
+  .card .head  .head_block .head_group .qualify_photo {
+    margin-left: 50rpx;
+    width: 50rpx;
+    height: 50rpx;
+    display: flex;
+    border-radius: 100%;
+   
+  }
+   .card .head  .head_block .head_group .qualify_photo image{
+   
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    will-change: transform;
+  
   }
    .card .head .head_photo {
    
@@ -40,8 +56,8 @@
     will-change: transform;
   }
    .card .head .right-top {
-   
-    width: 500rpx;
+    
+    width: 300rpx;
     color: rgba(0, 0, 255, 0.685);
     font-size: small;
     font-weight: 1000;
@@ -49,7 +65,15 @@
     display: flex;
    
   }
+  .card .head .right-top .score{
+    font-size: 35rpx;
+  }
+  .card .head .right-top .appoint_button{
+    
+    float: right;
+  }
   .card .head .right-top .appoint_button button{
+    border-radius: 50rpx;
     margin-left: 50rpx;
     width: 180rpx;
     height: 70rpx;
@@ -70,25 +94,12 @@
     display: flex;
     margin-top: 10rpx;
   }
-   .card .head .qualify_photo {
-    width: 60rpx;
-    height: 50rpx;
-    display: flex;
-    border-radius: 100%;
-    
   
-  }
-   .card .head .qualify_photo image{
-    margin-left: 50rpx;
-    width: 100%;
-    height: 100%;
-    border-radius: 100%;
-    will-change: transform;
-  
-  }
    .card .mid{
+    margin-top: 40rpx;
     font-size: 28rpx;
-    font-weight: 800;
+    font-weight: 650rpx;
+    line-height: 50rpx;
     
   }
    .card .mid .topic{
@@ -112,10 +123,10 @@
   }
    .card .fee{
    
-    font-size: small;
-    color:  rgba(0, 0, 255, 0.685);
-    text-align: right;
-    font-weight: 1000;
+    
+    
+    
+    
   }
   
    .card .mid .specialty_list{
@@ -149,7 +160,7 @@
     font-size: 30rpx;
   }
    .card .head .background {
-    font-size: 20rpx;
+    font-size: 25rpx;
     color: #4d4d4d;
     
   }
@@ -157,4 +168,116 @@
     margin-left: 20rpx;
     line-height: 1.5;
     font-size: 28rpx;
+  }
+  .card .main .caption{
+    
+    font-weight: bold;
+  }
+  .card .main .specialty_area{
+
+    display: flex;
+    margin-top: 30rpx;
+    margin-bottom:30rpx;
+  }
+  .card .main .specialty_area button{
+    border-radius: 50rpx;
+    margin-right: 50rpx;
+    width: 180rpx;
+    height: 70rpx;
+    align-self: right;
+    font-size: small;
+    font-weight: 400;
+    background-color: blue; 
+
+  }
+  .card .main .introduction{
+    margin-top: 30rpx;
+    margin-bottom:30rpx;
+    font-size: small;
+    color: #4d4d4d;
+  }
+  .card .main .topic {
+   
+    margin-top: 30rpx;
+    margin-bottom:30rpx;
+  }
+  .card .main .topic .specialty_list{
+    display: block;
+  }
+  .card .main .topic .specialty_list .wrap{
+    display: flex;
+    font-weight: 1000;
+  }
+  .card .main .topic .specialty_list .wrap .star{
+   
+      width: 40rpx;
+      height: 40rpx;
+      display: flex;
+  }
+  .card .main .topic .specialty_list .content{
+    color: #4d4d4d;
+  }
+  .card .main .topic .specialty_list .wrap .star image{
+    width: 100%;
+    height: 100%;
+
+  }
+  .card .main .topic .specialty_list .title{
+
+  }
+
+  .card .main .topic .specialty_list .content{
+
+  }
+  .card .main .comment .commentCard{
+    height: 200rpx;
+    background-color: hotpink;
+    border-style: groove;
+    border-left: dimgrey;
+    border-right: dimgrey;
+  }
+  .card .main .comment .commentCard .body{
+    margin-top: 0rpx;
+    margin-bottom: 0rpx;
+    border-style: groove;
+  }
+  .card .main .comment .commentCard .body .comment{
+    margin-top: 0rpx;
+    border-style: groove;
+  }
+  .card .main .comment .commentCard .wrap{
+    border-style: groove;
+    margin-bottom: 0rpx;
+    display: flex;
+  }
+  .card .main .comment .commentCard .wrap .head .avatar{
+    align-items: right;
+    width: 50rpx;
+    height: 50rpx;
+    
+  }
+  .card .main .comment .commentCard .wrap .head .avatar image{
+    width: 100%;
+    height: 100%;
+  }
+  .card .main .comment .commentCard .wrap .like{
+    align-items: right;
+    margin-left: 100rpx;
+    float: right;
+    width: 40rpx;
+    height: 40rpx;
+  }
+  .card .main .comment .commentCard .wrap .like image{
+    width: 100%;
+    height: 100%;
+  }
+  
+  .card .main .comment .commentCard .wrap .qualify_photo {
+    width: 50rpx;
+    height: 50rpx;
+    
+  }
+  .card .main .comment .commentCard .wrap .qualify_photo image{
+    width: 100%;
+    height: 100%;
   }

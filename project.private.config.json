@@ -64,6 +64,12 @@
         {
           "name": "咨询",
           "pathName": "pages/senior/senior",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "咨询详细页",
+          "pathName": "pages/senior/seniorIndex/index",
           "scene": null
         }
       ]
