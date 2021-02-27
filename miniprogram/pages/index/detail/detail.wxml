@@ -1,7 +1,7 @@
 <!--pages/index/detail/detail.wxml-->
 <view class='swipercontainer'>
   <swiper duration="100" circular='{{true}}' indicator-dots="{{true}}" style="height:500rpx">
-    <view wx:for="{{contents.content}}" wx:key="index">
+    <view wx:for="{{imageUrls}}" wx:key="index">
       <swiper-item data-id="{{index}}">
         <image src="{{item}}" class="swipimg" />
       </swiper-item>
@@ -10,8 +10,8 @@
 </view>
 <view class="topLine">
   <view class="personInfo">
-    <image src="/images/person.png" class="avatar" />
-    <view class="name">{{name}}</view>
+    <image src="{{authorAvatar}}" class="avatar" />
+    <view class="name">{{authorName}}</view>
   </view>
   <!--JUDGE IF THE USER HAS FOLLOWED-->
   <view class="focus_button">关注</view>
@@ -23,9 +23,8 @@
 <view class="comment_box">
   <view wx:for="{{comments}}" wx:key="index">
     <view class="comment">
-      <text class="name">{{item.name}}：</text>
-      <!--NEW DATABASE-->
-      <text class="comment_content">{{item.comment}}</text>
+      <text class="name">{{item.recordUsername}}：</text>
+      <text class="comment_content">{{item.content}}</text>
     </view>
   </view>
 </view>
