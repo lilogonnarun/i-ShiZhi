@@ -1,12 +1,17 @@
 <!--pages/issue/issue.wxml-->
 <view class="line">
-  <view class="title">标题：</view>
-  <input maxlength="30" bindinput="getTitle" />
+	<view class="title">标题：</view>
+	<input maxlength="30" bindinput="getTitle" />
 </view>
 <view class="upload">
-  <view class="title">内容：</view>
-  <textarea type="idcard" bindinput="getContent" maxlength="-1" show-confirm-bar="{{false}}" />
-</view>
+	<view class="title">内容：</view>
+	<textarea
+	 type="idcard"
+	 bindinput="getContent"
+	 maxlength="-1"
+	 show-confirm-bar="{{false}}"
+	/>
+	</view>
 <view class="upload">
   <view class="title">图片：</view>
   <block wx:for="{{info.uploadImgs}}" wx:key="index">
@@ -14,6 +19,19 @@
   </block>
   <image src="/images/uploadImg.png" bindtap="upload" />
 </view>
-<view style="display:flex;justify-content:center">
-  <view bindtap="issue" class="issue_button">发布</view>
+<view class="tag">
+  <view class="block" wx:for="{{tags}}" wx:for-item="item1">
+    <view class="row" wx:for="{{item1}}">
+      <view class="button">
+        <view >{{item.type}}</view>
+        <button wx:if="{{item.chosen==false}}" bindtap="isChosen" data-type="{{item.type}}" data-chosen="{{item.chosen}}">{{item.tag}}</button>
+        <button wx:elif="{{item.chosen==true}}" class="chosen">{{item.tag}}</button>
+      </view>
+    </view>
+  </view>
 </view>
+<view style="display:flex;justify-content:center">
+  <view bindtap="issue" class="issue_button">发表</view>
+</view>
+
+
