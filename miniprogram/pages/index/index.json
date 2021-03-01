@@ -4,6 +4,7 @@
     "rightDiscoveryCard":"/components/rightDiscoveryCard/index",
     "checkBlock": "/components/checkBlock/index",
     "addIcon":"/components/addIcon/index",
-    "questionCard":"/components/questionCard/index"
+    "questionCard":"/components/questionCard/index",
+    "wxShare":"/components/wxShare/index"
 }
 }

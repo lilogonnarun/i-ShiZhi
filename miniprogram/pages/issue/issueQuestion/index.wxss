@@ -1,0 +1,116 @@
+/* pages/issue/issue.wxss */
+.line{
+    width: 93%;
+    margin-left: 3.5%;
+    padding: 20rpx 0;
+    display: flex;
+    height: fit-content;
+    font-size: 30rpx;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1rpx solid #ebebeb;
+  }
+  .title{
+    font-size: 30rpx;
+    font-weight: 600;
+    flex: 1;
+  }
+  .line input{
+    width: 580rpx;
+  }
+  .upload{
+    width: 93%;
+    margin-left: 3.5%;
+    padding: 10rpx 0;
+    border-bottom: 1rpx solid #ebebeb;
+    font-size: 30rpx;
+  }
+  .upload textarea{
+    border: 1px solid gray;
+    border-radius: 20rpx;
+    width: 657.5rpx;
+    height: 1000rpx;
+    margin: 20rpx 0;
+    padding: 10rpx 20rpx;
+  }
+  .upload image{
+    width: 150rpx;
+    height: 150rpx;
+    margin: 20rpx 20rpx 0 0;
+    display: inline-block;
+    border-radius: 10rpx;
+  }
+  .upload .look_example{
+    float: right;
+    font-size: 28rpx;
+    /* color: rgb(118, 143, 255); */
+    color: #c4c400;
+  }
+  .upload .tip{
+    font-size: 25rpx;
+    color: gray;
+    font-weight: 400;
+  }
+  .issue_button{
+    color: white;
+    background-color: #075EAE;
+    font-size: 28rpx;
+    width: 200rpx;
+    text-align: center;
+    line-height: 1;
+    margin: 20rpx 0;
+    padding: 15rpx 40rpx;
+    border-radius: 30rpx;
+  }
+  .tag{
+    margin-top: 50rpx;
+    font-size: 26rpx;
+    color: rgb(99, 95, 95);
+    width: 900rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .tag {
+    margin-top: 0rpx;
+  }
+  .text text{
+    font-size: small;
+    color: grey;
+    margin-left: 30rpx;
+  }
+  .tag .block .row{
+    display: flex;
+   
+  }
+  
+  .chosen{
+    background-color: cadetblue;
+  }
+  .tag .block .row button{
+    border-radius: 30rpx;
+    border-style: dashed;
+    border-color: cadetblue;
+    border-width: 5rpx;
+    width: 200rpx;
+    margin: 20rpx;
+    height: 60rpx;
+    font-size: small;
+    font-weight: 700;
+    vertical-align: middle;
+    text-align: center;
+  }
+  
+  .tag .block .row .chosen{
+    background-color: cadetblue;
+    border: double;
+  }
+  .tag .block .row button.chosen{
+    background-color: cadetblue;
+  }
+.buttom{
+    display:flex;
+    justify-content:center
+}
+  

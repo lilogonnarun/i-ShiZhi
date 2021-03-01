@@ -145,10 +145,6 @@ scroll-view .sort_list{
 scroll-view .sort_item{
   padding: 10rpx 20rpx;
 }
-scroll-view .sort_list:first-child{
-  color: black;
-  font-weight: 600;
-}
 /* 查看更多按钮 */
 .sortList_more{
   width: 10%;

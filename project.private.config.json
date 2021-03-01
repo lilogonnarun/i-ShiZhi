@@ -70,6 +70,12 @@
         {
           "name": "咨询详细页",
           "pathName": "pages/senior/seniorIndex/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "发布问题",
+          "pathName": "pages/issue/issueQuestion/index",
           "scene": null
         }
       ]

@@ -1,0 +1,3 @@
+<view class="icon" >
+  <image src="/images/weixin.png" class="img" bindtap="onShareAppMessage"></image>
+</view>

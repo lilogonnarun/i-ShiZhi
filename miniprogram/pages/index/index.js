@@ -38,6 +38,7 @@ Page({
       statusBarHeight: app.globalData.statusBarHeight
     })
   },
+  
   // 前往详情页
   gotoDetail(e) {
 
