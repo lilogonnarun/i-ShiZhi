@@ -58,12 +58,9 @@ Page({
   //点亮标签
   isChosen: function (e) {
     let that = this;
-    console.log(e.currentTarget.dataset)
     var index = e.currentTarget.dataset.index;
     var bol = !e.currentTarget.dataset.chosen; // 获取状态
     var Tags=this.data.tags;
-    console.log(index, bol)
-    console.log(this.data.tags)
     Tags[index].chosen = bol;
     that.setData({
       tags:Tags
@@ -119,22 +116,11 @@ Page({
       data: {
         amount: "",
         content: this.data.info.content,
-        img1: img1,
-        img2: img2,
-        img3: img3,
-        img4: img4,
-        img5: img5,
-        img6: img6,
-        img7: img7,
-        img8: img8,
-        img9: img9,
-        openId: this.data.openId,
-        sort: this.data.sorts,
-        sub: "",
+        type: "1",
+        Id: this.data.openId,
         time: "",
         title: this.data.info.title,
-        type: "1",
-        vid: ""
+       
       },
       success: res => {
         console.log('issued !')
