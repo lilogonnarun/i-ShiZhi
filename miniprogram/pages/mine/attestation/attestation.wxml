@@ -1,0 +1,26 @@
+<!--pages/mine/attestation/attestation.wxml-->
+<view class="wrapper">
+  <form action="">
+    <view class="guide">填写下列资料以完成认证申请</view>
+
+    <view class="form_item">
+      <text class="label">认证专业/行业</text>
+      <input type="text" placeholder="请输入你需要认证的专业/行业" placeholder-style="color: rgb(0, 0, 0, .5);"></input>
+    </view>
+
+    
+    <view class="form_item">
+      <text class="label">学校/公司名称</text>
+      <input type="text" placeholder="请输入你所在的学校/公司单位" placeholder-style="color: rgb(0, 0, 0, .5);"></input>
+    </view>
+
+    <!-- 上传文件 -->
+    <view class="upload form_item">
+      <image src="../../../images/issue-active.png" class="add"></image>
+      <view class="guide">上传相关证明文件（学生证/工作证）</view>
+      <view class="guide">支持多个文件上传</view>
+    </view>
+  </form>
+
+</view>
+<button class="submit">提交审核</button>

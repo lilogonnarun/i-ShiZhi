@@ -19,7 +19,7 @@
     "checkSiteMap": true,
     "uploadWithSourceMap": true,
     "compileHotReLoad": false,
-    "useMultiFrameRuntime": true,
+    "useMultiFrameRuntime": false,
     "useApiHook": true,
     "babelSetting": {
       "ignore": [],
@@ -40,6 +40,7 @@
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "appid": "wxb6b91b52196d5e7c",
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
   "condition": {
     "plugin": {
       "list": []
@@ -92,6 +93,18 @@
         {
           "name": "pages/issue/issue",
           "pathName": "pages/issue/issue",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "编辑资料",
+          "pathName": "pages/mine/home/personal/personnal",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "申请入驻",
+          "pathName": "pages/mine/settleIn/settleIn",
           "scene": null
         }
       ]

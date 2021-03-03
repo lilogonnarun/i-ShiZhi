@@ -1,0 +1,11 @@
+<!--components/tag/tag.wxml-->
+<view class="tagBox">
+  <image src="../../images/check.png" class="check" wx:if="{{selected && needCheckIcon}}"></image>
+  <image class="placeholder " wx:else></image>
+  <view class="content {{type=='add'?'add':''}}" wx:if="{{selected}}">
+    {{content}}
+  </view>
+  <view class="content unselected {{type=='add'?'add':''}}" wx:else>
+    {{content}}
+  </view>
+</view>

@@ -1,14 +1,16 @@
-.top_box {
+/* .top_box {
   width: 100%;
   height: 420rpx;
   background-color: #f3f1ed;
   padding: 50rpx;
 }
+
 .top_box .top_first {
   display: flex;
   width: 100%;
   height: 220rpx;
 }
+
 .top_box .top_first .top_img {
   width: 180rpx;
   height: 180rpx;
@@ -18,11 +20,13 @@
   overflow: hidden;
   margin-right: 50rpx;
 }
+
 .top_box .top_first .name_signature {
   margin-top: 10rpx;
   height: 180rpx;
   width: 250rpx;
 }
+
 .top_box .top_first .name_signature .name {
   display: flex;
   align-items: center;
@@ -31,6 +35,7 @@
   font-weight: 600;
   color: #3c3c3c;
 }
+
 .top_box .top_first .name_signature .signature {
   display: flex;
   align-items: center;
@@ -39,31 +44,37 @@
   font-weight: 500;
   color: #4d4343;
 }
+
 .top_box .top_first .name_signature .flower_money {
   display: flex;
   align-items: center;
 }
+
 .top_box .top_first .name_signature .flower_money .flower_img {
   height: 30rpx;
   width: 30rpx;
   border-radius: 50%;
   margin-right: 5rpx;
 }
+
 .top_box .top_first .name_signature .flower_money .flower_num {
   font-size: 25rpx;
   font-weight: 400;
   margin-right: 20rpx;
 }
+
 .top_box .top_first .name_signature .flower_money .money_img {
   height: 30rpx;
   width: 30rpx;
   border-radius: 50%;
   margin-right: 5rpx;
 }
+
 .top_box .top_first .name_signature .flower_money .money_num {
   font-size: 25rpx;
   font-weight: 400;
 }
+
 .top_box .top_first .edit {
   margin-left: 30rpx;
   margin-top: 20rpx;
@@ -78,34 +89,41 @@
   padding-left: 45rpx;
   padding-top: 10rpx;
 }
+
 .top_box .jinyan {
   display: flex;
   align-items: center;
   margin-bottom: 30rpx;
 }
+
 .top_box .jinyan .level {
   font-weight: 600;
   font-size: 30rpx;
   margin-right: 10rpx;
 }
+
 .top_box .jinyan .level_img {
   height: 50rpx;
   width: 50rpx;
   border-radius: 50%;
   margin-right: 10rpx;
 }
+
 .top_box .jinyan .progress-box {
   width: 300rpx;
 }
+
 .top_box .top_second {
   display: flex;
 }
+
 .top_box .top_second .label_img {
   height: 50rpx;
   width: 50rpx;
   border-radius: 50%;
   margin-right: 10rpx;
 }
+
 .top_box .top_second .label_list .label {
   font-size: 30rpx;
   font-weight: 500;
@@ -116,42 +134,151 @@
   margin-right: 30rpx;
   padding: 15rpx;
 }
+
 .top_box .top_third {
   margin-top: 30rpx;
   display: flex;
 }
+
 .top_box .top_third .fans_img {
   height: 50rpx;
   width: 50rpx;
   border-radius: 50%;
   margin-right: 10rpx;
 }
+
 .top_box .top_third .fans {
   font-weight: 600;
   font-size: 30rpx;
   margin-right: 10rpx;
 }
+
 .top_box .top_third .fans_numble {
   font-weight: 400;
   font-size: 30rpx;
   margin-right: 30rpx;
 }
+
 .top_box .top_third .zan_img {
   height: 50rpx;
   width: 50rpx;
   border-radius: 50%;
   margin-right: 10rpx;
 }
+
 .top_box .top_third .zans {
   font-weight: 600;
   font-size: 30rpx;
   margin-right: 10rpx;
 }
+
 .top_box .top_third .zans_numble {
   font-weight: 400;
   font-size: 30rpx;
   margin-right: 10rpx;
+} */
+
+
+.top_box {
+  padding: 40rpx 20rpx 10rpx 20rpx;
 }
+
+/* 头像、名称、入驻 */
+.top_box .head {
+  display: flex;
+} 
+.top_box .userAvatarUrl {
+  width: 150rpx;
+  height: 150rpx;
+  flex: 0 0 150rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0rpx 10rpx 30rpx 10rpx rgba(85, 85, 85, 0.10);
+}
+
+.top_box .head .mid {
+  margin-left: 20rpx;
+  padding: 10rpx 0 0 0;
+  display: flex;
+  flex-direction: column;
+}
+.head .mid .nickName {
+  font-weight: 800;
+  margin-bottom: 15rpx;
+}
+.head .mid .motto {
+  font-size: 30rpx;
+  color: #797979;
+}
+.top_box .head button {
+  border-radius: 30rpx;
+  background-color: rgb(93, 135, 212);
+  color: white;
+  font-size: 30rpx;
+}
+.top_box .head .edit {
+  margin-bottom: 14rpx;
+  width: 180rpx;
+}
+.top_box .head .settled {
+  width: 150rpx;
+}
+
+/* 收藏、预约、设置按钮 */
+.operate {
+  padding: 10rpx 0 15rpx 0;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0 4rpx 20rpx 1rpx rgba(0, 0, 0, .1);
+  color: #797979;
+}
+.operate view text {
+  display: block;
+  margin-top: 10rpx;
+  text-align: center;
+  font-size: 50rpx;
+  /* font-weight: 500; */
+}
+
+
+/* 等级、粉丝、获赞 */
+.top_box .bottom {
+  margin-top: 30rpx;
+  display: flex;
+  font-size: 30rpx;
+  font-weight: 800;
+  text-align: center;
+}
+.top_box .bottom>view {
+  display: flex;
+  flex-grow: 1;
+}
+
+.top_box .bottom .level progress {
+  width: 280rpx;
+}
+.top_box .bottom .level .exp {
+  margin-bottom: 10rpx;
+  font-weight: initial;
+  font-size: 24rpx;
+  text-align: center;
+  
+}
+.top_box .bottom .level .currentLevel {
+  /* padding-top: 35rpx; */
+  line-height: 108rpx;
+  margin-right: 10rpx;
+  vertical-align: bottom;
+  /* border: 1rpx solid red; */
+}
+.top_box .bottom .detail {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  /* border: 1rpx solid red; */
+}
+
+
 .tap_title {
   display: flex;
   padding: 20rpx;
@@ -159,34 +286,45 @@
   align-items: center;
   padding-left: 20%;
 }
+
 .tap_title .title_item {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
+.tap_title .title_item:nth-of-type(1) {
+  border-right: 2rpx solid rgba(0, 0, 0, .1);
+}
+
 .tap_title .active {
   color: #075EAE;
-  border-bottom: 10rpx solid currentColor;
+  border-bottom: 5rpx solid currentColor;
   position: relative;
 }
+
 .my_work {
   display: flex;
 }
+
 .column {
   width: 47%;
   margin-left: 2%;
 }
+
 .box {
   margin-top: 15rpx;
   box-shadow: 0rpx 0rpx 20rpx 10rpx rgba(85, 85, 85, 0.1);
   border-radius: 10rpx;
 }
+
 .box image.content_pic {
   width: 100%;
   border-top-left-radius: 10rpx;
   border-top-right-radius: 10rpx;
 }
+
 .box .title {
   font-size: 28rpx;
   font-weight: 600;
@@ -201,6 +339,7 @@
   overflow: hidden;
   /*超出部分文字隐藏(竖直)*/
 }
+
 .box .bottom_row {
   display: flex;
   justify-content: space-between;
@@ -208,12 +347,14 @@
   color: #3c3c3c;
   padding: 20rpx 5%;
 }
+
 .box .userAvatarUrl {
   width: 42rpx;
   height: 42rpx;
   border-radius: 50%;
   overflow: hidden;
 }
+
 .box .userNickName {
   font-size: 24rpx;
   margin-left: 10rpx;
@@ -226,10 +367,68 @@
   white-space: nowrap;
   /*溢出不换行*/
 }
+
 .box image.likes {
   width: 40rpx;
   height: 40rpx;
 }
+
 .box .likes_num {
   font-size: 25rpx;
+}
+
+
+.myAnswer {
+  background-color: rgb(243, 241, 237);
+}
+
+.answerBox {
+  padding: 10rpx 20rpx 0 20rpx;
+  margin: 0 0 15rpx 0;
+  /* border: 1rpx solid rgba(85, 85, 85, 0.1); */
+  box-shadow: 0 0 2rpx 1rpx rgba(85, 85, 85, .1);
+  background-color: white;
+  font-size: 26rpx;
+}
+
+.answerBox .userAvatarUrl {
+  display: inline-block;
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  overflow: hidden;
+
+}
+
+.answerBox .nickName {
+  margin-left: 10rpx;
+  position: absolute;
+  display: inline;
+  line-height: 50rpx;
+  font-size: 24rpx;
+}
+
+.answerBox .answerContent,
+.answerBox .answerRef {
+  margin-top: 20rpx;
+}
+
+.answerBox .answerRef {
+  color: grey;
+}
+
+.answerBox .answerContent {
+  height: 90rpx;
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  display: -webkit-box;
+
+  -webkit-line-clamp: 3;
+
+  -webkit-box-orient: vertical;
+  line-height: 32rpx;
+  font-size: 30rpx;
+  font-weight: 540;
 }

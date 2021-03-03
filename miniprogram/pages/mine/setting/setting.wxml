@@ -1,0 +1,32 @@
+<!--pages/mine/setting/setting.wxml-->
+<view class="page">
+  <view class="top">
+    <view class="item">
+      <text>我的关注</text>
+      <image src="../../../images/nextone.png"></image>
+    </view>
+  </view>
+
+  <view class="footer">
+    <view class="wrapper">
+      <view class="item">
+        <text>在线客服</text>
+        <image src="../../../images/nextone.png"></image>
+      </view>
+    </view>
+    <view class="wrapper">
+      <view class="item">
+        <text>关于我们</text>
+        <image src="../../../images/nextone.png"></image>
+      </view>
+    </view>
+    <view class="wrapper">
+      <view class="item">
+        <text>建议与投诉</text>
+        <image src="../../../images/nextone.png"></image>
+      </view>
+    </view>
+
+
+  </view>
+</view>

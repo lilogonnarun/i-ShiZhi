@@ -1,0 +1,49 @@
+/* pages/mine/attestation/attestation.wxss */
+.wrapper {
+  margin-bottom: 30rpx;
+  padding: 40rpx 35rpx;
+  box-shadow: 0 1rpx 10rpx 5rpx rgba(0, 0, 0, .1);
+  font-size: 32rpx;
+}
+.wrapper .guide {
+  color: rgb(0, 0, 0, .5);
+}
+.wrapper input {
+  padding-left: 20rpx;
+  margin-top: 30rpx;
+  height: 70rpx;
+  border: 1rpx solid rgba(0, 0, 0, .3);
+  border-radius: 10rpx;
+}
+.wrapper .form_item {
+  margin-top: 30rpx;
+}
+
+.wrapper .label {
+  font-size: 32rpx;
+  font-weight: 800;
+}
+
+.upload.form_item {
+  height: 300rpx;
+  margin-top: 60rpx;
+  margin-bottom: 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1rpx solid rgba(0, 0, 0, .3);
+  border-radius: 10rpx;
+}
+.upload .add {
+  width: 40rpx;
+  height: 40rpx;
+}
+.submit {
+  width: 200rpx;
+  border: 1rpx solid rgba(0, 0, 0, .3);
+  background-color: rgb(196, 243, 251);
+  color:#5D87D4;
+  font-weight: 900;
+  font-size: 32rpx;
+}
