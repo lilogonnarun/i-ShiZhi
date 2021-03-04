@@ -19,7 +19,7 @@
 		<view style="display:flex;">
 			<scroll-view scroll-x="{{true}}" class="sort_list_box">
 				<view wx:for="{{sorts}}" wx:key="key" class="sort_list">
-					<view class="sort_item">{{item}}</view>
+					<view class='sort_item'>{{item}}</view>
 				</view>
 			</scroll-view>
 			<view class="sortList_more">
@@ -31,6 +31,7 @@
 		<view class="tab_content" hidden="{{activeIndex != 1}}">
 
 			<questionCard/>
+			<addIcon toUrl="../issue/issueQuestion/index" />
 
 		</view>
 		<!-- 发现列表 -->
@@ -97,10 +98,10 @@
 					</block>
 				</view>
 			</view>
-
+			<addIcon toUrl="../issue/issue" />
 		</view>
+		<wxShare/>
 	</view>
-	<addIcon/>
 </view>
 
 <!-- 分类栏列表更多内容 -->

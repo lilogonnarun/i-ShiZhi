@@ -1,0 +1,17 @@
+<!--pages/issue/issue.wxml-->
+<view class="line">
+	<input maxlength="30" bindinput="getTitle" placeholder="输入问题并以问号结尾"/>
+</view>
+<view class="upload">
+	<textarea
+	 type="idcard"
+	 bindinput="getContent"
+	 maxlength="-1"
+	 show-confirm-bar="{{false}}"
+     placeholder="对问题进行补充，可以更快获得解答"
+	/>
+	</view>
+<view class="buttom">
+  <view bindtap="issue" class="issue_button">发表</view>
+</view>
+
