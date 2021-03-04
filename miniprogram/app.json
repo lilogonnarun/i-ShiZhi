@@ -53,7 +53,7 @@
         "selectedIconPath": "images/message-active.png"
       },
       {
-        "pagePath": "pages/mine/mine",
+        "pagePath": "pages/mine/home/home",
         "text": "我的",
         "iconPath": "images/mine.png",
         "selectedIconPath": "images/mine-active.png"
