@@ -1,0 +1,28 @@
+
+<view class="column">
+	<block wx:for="{{cards.content}}" wx:key="index">
+		<!--pass data 'id' to js-->
+		<view
+		 class="box"
+		 wx:if="{{index%2==0}}"
+		 bindtap="gotoDetail"
+		 data-detail="{{item}}"
+		>
+			<!-- 奇偶分开放 -->
+			<image src="{{item.img1}}" class="content_pic" mode="widthFix" />
+			<view class="title">{{item.title}}</view>
+			<view class="bottom_row">
+				<view class="row">
+					<view class="userAvatarUrl">
+						<open-data type="userAvatarUrl" />
+					</view>
+					<view class="userNickName">{{item.userId}}</view>
+				</view>
+				<view class="row">
+					<image src="/images/likes.png" class="likes" />
+					<view class="likes_num">{{item.likes}}</view>
+				</view>
+			</view>
+		</view>
+	</block>
+</view>
