@@ -1,111 +1,157 @@
 <!--pages/mine/home/home.wxml-->
+<!-- 顶部信息 -->
 <view class="top_box">
-    <view class="top_first">
-        <view class="top_img">
+    <!-- 头像、签名、编辑信息、入驻 -->
+    <view class="head">
+        <view class="userAvatarUrl">
             <open-data type="userAvatarUrl"></open-data>
         </view>
-        <view class="name_signature">
-            <view class="name">CPCer</view>
-            <view class="signature">funny everyday</view>
-            <view class="flower_money">
-                <image class="flower_img" src="/images/flower.png" />
-                <text class="flower_num">:12</text>
-                <image class="money_img" src="/images/money.png" />
-                <text class="money_num">:13</text>
-            </view>
+        <view class="mid">
+            <open-data type="userNickName" class="nickName"></open-data>
+            <text class="motto">我相信做好自己，我就是奇迹!我就是奇迹我就是奇</text>
         </view>
-        <navigator class="edit" url="../personal/personal">
-            编辑
-        </navigator>
+        <view>
+            <button class="edit" bindtap="gotopersonal">编辑信息</button>
+            <button class="settled" bindtap="gotoSettled">入驻</button>
+        </view>
     </view>
-    <view class="jinyan">
-        <text class="level">Lv 1</text>
-        <image class="level_img" src="/images/level.png" ></image>
-        <view class="progress-box" >
-            <progress percent="80" color="#10AEFF" active stroke-width="5" show-info="true" font-size="25rpx"/>
+
+    <!-- 等级、粉丝等相关信息 -->
+    <view class="bottom">
+        <!-- 等级 -->
+        <view class="level">
+            
+            <view class="currentLevel">
+                Lv{{exp.level}}
+            </view>
+            <view class="progress-box">
+                <view class="exp">
+                    经验值：{{exp.currentExp}} / {{exp.totalExp}}
+                </view>
+                <progress percent="{{exp.percent}}" color="#10AEFF" active stroke-width="15" font-size="25rpx" border-radius="20"/>
+            </view>
         </view>
 
+        <!-- 关注、粉丝、赞 -->
+        <view class="detail">
+            <view>
+                    {{userInfo.follow_num}}
+                <view>
+                    关注
+                </view>
+            </view>
+            <view>
+                    {{userInfo.fans_num}}
+                <view>
+                    粉丝
+                </view>
+            </view>
+            <view>
+                    {{userInfo.likes_num}}
+                <view>
+                    获赞与收藏
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<!-- 收藏、预约、设置 -->
+<view class="operate">
+    
+    <view bindtap="gotoCollection">
+        <text class="iconfont icon-shoucang" style="font-size: 56rpx"></text>
+        收藏
     </view>
     
-    <view class="top_second">
-        <image class="label_img" src="/images/biaoqian.png"/>
-        <view class="label_list" wx:for="{{label_list}}" wx:for-item="item" wx:for-index="index" wx:key="index">
-            <view class="label">
-                {{item}}
-            </view>
-        </view>
+    <view bindtap="gotoBook">
+        <text class="iconfont icon-yuyue1"></text>
+        预约
     </view>
-     <view class="top_third">
-        <image class="fans_img" src="/images/fans.png"></image>
-        <view class="fans">
-            粉丝：
-        </view>
-        <view class="fans_numble">
-            123
-        </view>
-        <image class="zan_img" src="/images/zan.png"></image>
-        <view class="zans">
-            获赞：
-        </view>
-        <view class="zans_numble">
-            123
-        </view>
+
+    <view bindtap="gotoSetting">
+        <text class="iconfont icon-shezhi1" style="font-size: 48rpx"></text>
+        设置
     </view>
 </view>
+
+<!-- 回答、作品导航栏 -->
 <view class="tap_title">
-    <view class="title_item {{item.isActive?'active':' '}}" 
-    wx:for="{{tabs}}" 
-    wx:for-item="item" 
-    wx:for-index="index" 
-    wx:for-key="id"
-    wx:key="index"
-    bindtap="handleItemTap"
-    data-index="{{index}}">
-            {{item.name}}
+    <view class="title_item {{item.isActive?'active':' '}}" wx:for="{{tabs}}" wx:for-item="item" wx:for-index="index"
+        wx:for-key="id" wx:key="index" bindtap="handleItemTap" data-index="{{index}}">
+        {{item.name}}
     </view>
 </view>
-<view class="my_work" hidden="{{tabs[1].isActive!=true}}" >
+
+<!-- 作品 -->
+<view class="my_work" hidden="{{tabs[1].isActive!=true}}">
     <view class="column">
         <block wx:for="{{Info}}" wx:key="index">
-        <view class="box" wx:if="{{index%2==0}}" bindtap="gotoDetail"> <!-- 奇偶分开放 -->
-            <image src="{{item.pic}}" class="content_pic" mode="widthFix" />
-            <view class="title">{{item.title}}</view>
-            <view class="bottom_row">
-            <view class="row">
-                <view class="userAvatarUrl">
-                <open-data type="userAvatarUrl"></open-data>
+            <view class="box" wx:if="{{index%2==0}}" bindtap="gotoDetail">
+                <!-- 奇偶分开放 -->
+                <image src="{{item.pic}}" class="content_pic" mode="widthFix" />
+                <view class="title">{{item.title}}</view>
+                <view class="bottom_row">
+                    <view class="row">
+                        <view class="userAvatarUrl">
+                            <open-data type="userAvatarUrl"></open-data>
+                        </view>
+                        <view class="userNickName">{{item.nickName}}</view>
+                    </view>
+                    <view class="row">
+                        <image src="/images/likes.png" class="likes" />
+                        <view class="likes_num">{{item.likes_num}}</view>
+                    </view>
                 </view>
-                <view class="userNickName">{{item.nickName}}</view>
             </view>
-            <view class="row">
-                <image src="/images/likes.png" class="likes" />
-                <view class="likes_num">{{item.likes_num}}</view>
-            </view>
-            </view>
-        </view>
         </block>
     </view>
     <view class="column">
         <block wx:for="{{Info}}" wx:key="index">
-        <view class="box" wx:if="{{index%2==1}}" bindtap="gotoDetail"> <!-- 奇偶分开放 -->
-            <image src="{{item.pic}}" class="content_pic" mode="widthFix" />
-            <view class="title">{{item.title}}</view>
-            <view class="bottom_row">
-            <view class="row">
-                <view class="userAvatarUrl">
-                <open-data type="userAvatarUrl"></open-data>
+            <view class="box" wx:if="{{index%2==1}}" bindtap="gotoDetail">
+                <!-- 奇偶分开放 -->
+                <image src="{{item.pic}}" class="content_pic" mode="widthFix" />
+                <view class="title">{{item.title}}</view>
+                <view class="bottom_row">
+                    <view class="row">
+                        <view class="userAvatarUrl">
+                            <open-data type="userAvatarUrl"></open-data>
+                        </view>
+                        <view class="userNickName">{{item.nickName}}</view>
+                    </view>
+                    <view class="row">
+                        <image src="/images/likes.png" class="likes" />
+                        <view class="likes_num">{{item.likes_num}}</view>
+                    </view>
                 </view>
-                <view class="userNickName">{{item.nickName}}</view>
             </view>
-            <view class="row">
-                <image src="/images/likes.png" class="likes" />
-                <view class="likes_num">{{item.likes_num}}</view>
-            </view>
-            </view>
-        </view>
         </block>
     </view>
 </view>
-<view class="my_inf" hidden="{{tabs[0].isActive!=true}}">
-    个人信息
+
+<!-- 回答 -->
+<view class="myAnswer" hidden="{{tabs[0].isActive!=true}}">
+    <block wx:for="{{answerInfo}}" wx:key="index">
+        <view class="answerBox">
+            <!-- 用户信息 -->
+            <view>
+                <view class="userAvatarUrl">
+                    <open-data type="userAvatarUrl"></open-data>
+                </view>
+                <view class="nickName">{{item.nickName}}</view>
+            </view>
+
+            <!-- 回答主内容 -->
+            <view class="answerContent">
+                <text>{{item.content}}</text>
+            </view>
+
+            <!-- 回答相关信息 -->
+            <view class="answerRef">
+                <text>{{item.agreeNum}}赞同 · </text>
+                <text>{{item.commentNum}}评论 · </text>
+                <text>{{item.date}}</text>
+            </view>
+        </view>
+    </block>
 </view>

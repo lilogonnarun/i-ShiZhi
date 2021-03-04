@@ -1,0 +1,14 @@
+<view class="box">
+  <view class="block-group">
+      <block wx:for="{{items}}" bindtap="select">
+        <view class="item1">
+          <view class="block-title">{{item.title}}</view>
+            <view class="block-desc">
+              {{item.desc}}
+            </view>
+      <image src="/images/chose.png" class="img"/>
+    </view>
+      
+    </block>
+  </view>
+</view>

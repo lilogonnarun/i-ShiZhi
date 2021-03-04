@@ -1,2 +1,102 @@
 <!--pages/mine/settleIn/settleIn.wxml-->
-<text>pages/mine/settleIn/settleIn.wxml</text>
+<!--  -->
+<view class="outerWapper">
+  <!-- 用户来源 -->
+  <view class="origin">
+    <view class="question">您来自？</view>
+    <view class="origin_tagBox">
+      <tag selected="{{origin.szu}}" id="szu" needCheckIcon="{{false}}" content="深大学生" bindtap="choose"></tag>
+      <tag selected="{{origin.staff}}" id="staff" needCheckIcon="{{false}}" content="职场企业" bindtap="choose"></tag>
+      <tag selected="{{origin.other}}" id="other" needCheckIcon="{{false}}" content="其他" bindtap="choose"></tag>
+    </view>
+  </view>
+
+  <!-- 擅长领域 -->
+  <view class="skilled_field">
+    <view class="question">请选择您擅长的领域，可以包括但不限于以下方面：</view>
+    <view class="field_tagBox">
+      <tag selected="{{true}}"  content="职场知识"></tag>
+      <tag selected="{{false}}"  content="硬性技能"></tag>
+      <tag selected="{{true}}"  content="留学"></tag>
+      <tag selected="{{true}}"  content="考研"></tag>
+      <tag selected="{{true}}"  content="实习"></tag>
+      <tag selected="{{true}}"  content="四大"></tag>
+      <tag selected="{{true}}"   content="金融"></tag>
+      <tag selected="{{true}}"  content="咨询"></tag>
+      <tag selected="{{true}}"   content="IT互联网"></tag>
+      <tag selected="{{true}}"   content="快消"></tag>
+      <tag selected="{{true}}"   content="证书"></tag>
+      <tag selected="{{true}}"   content="转专业"></tag>
+      <tag selected="{{true}}"   content="绩点"></tag>
+      <tag selected="{{true}}"   content="双辅修"></tag>
+      <tag selected="{{true}}"   content="专业前景"></tag>
+      <tag selected="{{true}}"   content="科研"></tag>
+      <tag type="add" content="添加"></tag>
+    </view>
+  </view>
+
+  <!-- 个人信息 -->
+  <view class="personal_info">
+    <view class="question">填写个人信息</view>
+    <form action="" class="info_form">
+      
+      <view class="Info_item">
+        <view>名称</view>
+        <input type="text"></input>
+      </view>
+      <view class="Info_item">
+        <view>微信号</view>
+        <input type="text"></input>
+      </view>
+      <view class="Info_item">
+        <view>咨询费</view>
+        <input type="text" placeholder="咨询费/20分钟" placeholder-class="placeholder"></input>
+      </view>
+      <view class="Info_item">
+        <view>空闲时间</view>
+        <input type="text" placeholder="例如：周一到周五上午9：00——11：00" placeholder-class="placeholder"></input>
+      </view>
+    </form>
+  </view>
+
+  <!-- 自我描述 -->
+  <view class="description">
+    <view class="question">描述自己：</view>
+    <input type="text" class="descInput" placeholder="例如：转专业经验丰富者" placeholder-class="placeholder"></input>
+  </view>
+
+  <!-- 擅长话题 -->
+  <view class="skilled_topic">
+    <view class="question">擅长话题：<text class="notice">（最多可以写三个）</text></view>
+
+    <!-- 输入框 -->
+    <view class="topic_box">
+      <view class="head">
+        <view>
+          <text class="index">1</text>
+          <text>：</text>
+        </view>
+        <input type="text" placeholder="例：转专业规则的详细解读" class="topic_input" placeholder-class="placeholder"></input>
+      </view>
+      <view class="bottom">
+        <view class="title">你的优势：</view>
+        <textarea name="" id=""  placeholder=
+        "简要介绍你在这个话题中的独特见解和优势"
+        cols="30" rows="15"
+        placeholder-class="placeholder"></textarea>
+      </view>
+    </view>
+
+    <!-- 添加话题 -->
+    <view class="add_topic">
+      <image src="../../../images/issue.png" class="add_icon"></image>
+      <view>点击添加更多话题</view>
+    </view>
+  </view>
+
+  
+  <view class="footer">
+    <button>入驻</button>
+    <button bindtap="gotoAttestation">认证</button>
+  </view>
+</view>

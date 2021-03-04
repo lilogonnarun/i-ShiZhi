@@ -1,0 +1,38 @@
+ /* pages/mine/setting/setting.wxss */
+ .page {
+   
+   color: rgba(0, 0, 0, .5);
+   font-size: 36rpx;
+   font-weight: 800;
+ }
+ .page .top,
+ .page .footer {
+   margin-bottom: 30rpx;
+  padding: 20rpx 0;
+  box-shadow: 0 1rpx 10rpx 5rpx rgba(0, 0, 0, .1);
+ }
+ .page .footer {
+  margin-bottom: 0;
+  padding-bottom: 0;
+ }
+.top .item {
+  padding: 0 40rpx;
+}
+ .item {
+   display: flex;
+   justify-content: space-between;
+ }
+ .footer .wrapper {
+   padding: 0 40rpx;
+   padding-bottom: 10rpx;
+   border-bottom: 1rpx solid rgba(0, 0, 0, .1);
+   margin-bottom: 10rpx;
+ }
+ .footer .wrapper:nth-of-type(3) {
+  padding-bottom: 2 0;
+  margin-bottom: 0;
+ }
+ image {
+   width: 40rpx;
+   height: 40rpx;
+ }

@@ -1,5 +1,6 @@
 //app.js
 App({
+  globalData: {},
   onLaunch: function () {
     
     if (!wx.cloud) {
@@ -19,5 +20,36 @@ App({
     this.globalData = {
       statusBarHeight: statusBarHeight // 最顶部状态栏高度
     }
+
+    // 获取openid并判断是否注册
+    wx.cloud.callFunction({
+      name: 'login',
+      success: res => {
+        this.globalData.openid = res.result.openid
+        console.log(res.result.openid);
+        wx.request({
+          url: 'http://java.maozj.site:8080/api/main/verify',
+          type: 'get',
+          data: {
+            openId: res.result.openid
+          },
+          success: result => {
+            console.log(result)
+            const {data: status} = result
+            // 未注册
+            // if(!status) {
+            //   wx.navigateTo({
+            //     url: '../mine/home/personal/personnal',
+            //   })
+            //   wx.showToast({
+            //     title: '请先注册',
+            //     duration: 1500,
+            //     icon: "none"
+            //   })
+            // } 
+          }
+        })
+      }
+    })
   }
 })

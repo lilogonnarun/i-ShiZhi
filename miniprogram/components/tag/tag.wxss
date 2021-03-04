@@ -1,0 +1,38 @@
+/* components/tag/tag.wxss */
+.tagBox {
+  padding-top: -30rpx;
+  padding: 0;
+  margin: 0;
+}
+.check {
+  position: relative;
+  left: 130rpx;
+  top: 30rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.placeholder {
+  position: relative;
+  left: 130rpx;
+  top: 30rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.content {
+  width: 160rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  background-color: #5D87D4;
+  border-radius: 40rpx;
+  color: white;
+  text-align: center;
+  font-size: 26rpx;
+}
+.unselected {
+  background-color: rgba(0, 0, 0, .35);
+}
+.add{
+  background-color: white;
+  color: rgba(0, 0, 0, .35);
+  border: 1px dotted rgb(0, 0, 0);
+}
