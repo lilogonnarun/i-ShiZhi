@@ -1,0 +1,18 @@
+/* components/add/index.wxss */
+button{
+    
+}
+.icon{
+    background: none;
+    position: sticky;
+    margin-right: 50rpx;
+    float: right;
+    bottom: 10%;
+    
+   
+}
+  .icon image{
+    width: 100rpx;
+    height: 100rpx;
+    display:block;
+  }

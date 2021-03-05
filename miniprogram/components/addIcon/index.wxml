@@ -1,0 +1,3 @@
+<navigator class="icon" url="{{toUrl}}">
+  <image src="/images/issue-active.png" class="img"></image>
+</navigator>

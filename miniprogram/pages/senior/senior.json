@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "找大佬"
+  "usingComponents": {
+    "businessCard":"/components/businessCard/index"
+  },
+  "navigationBarTitleText": "咨询"
 }
